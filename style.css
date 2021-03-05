@@ -1,0 +1,454 @@
+/*#region defining fonts*/
+
+@font-face {
+  font-family: "montserrat";
+  src: url(/fonts/montserrat/Montserrat-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "montserrat-thin";
+  src: url(./fonts/montserrat/Montserrat-Thin.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "montserrat-bold";
+  src: url(./fonts/montserrat/Montserrat-Medium.ttf) format("truetype");
+}
+
+/*#endregion*/
+
+/*#region header and footer*/
+
+header, footer {
+  font-family: montserrat-thin;
+  font-size: 60%;
+  color: rgba(185, 203, 223, 0.5);
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header {
+  margin-top: 2px;
+}
+
+footer {
+  margin-bottom: 2px;
+}
+
+/*#endregion*/
+
+/*#region defining general body attributes*/
+
+html {
+  font-size: min(5vh, 5vw, 32px);
+  background-image: url(images/back.jpg);
+  background-position: top center;
+  position: relative;
+}
+
+body {
+  margin: 0px;
+  height: 100vh;
+  font-family: montserrat;
+  color: rgba(185, 203, 223, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+body::after {
+  content: "";
+  background-color: rgba(9, 20, 38, 0.5);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -4;
+}
+
+div {
+  border-radius: 10px;
+  margin: 2px;
+}
+
+p {
+  margin: 0px;
+  white-space: pre;
+}
+
+#main {
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.dark {
+  background-color: rgba(35, 53, 74, 0.5);
+}
+
+.light {
+  background-color: rgba(19, 44, 83, 0.5);
+}
+
+.button {
+  width: min(10vh, 10vw);
+  height: min(10vh, 10vw);
+  background-size: min(6vh, 6vw);
+  border-radius: min(3vh, 3vw);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/*#endregion*/
+
+/*#region top div */
+
+#top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 5px;
+}
+
+#conceptionDateIcon {
+  background-image: url(/images/sperm.png);
+  display: flex;
+}
+
+#periodDateIcon {
+  background-image: url(/images/drop.png);
+  display: flex;
+  border: solid 1px white;
+}
+
+#conceptionDateField {
+  display: none;
+  flex-direction: row;
+}
+
+#periodDateField {
+  display: flex;
+  flex-direction: row;
+}
+
+#conceptionDateSearch {
+  background-image: url(/images/write.png);
+}
+
+/*#endregion*/
+
+/*#region center div*/
+
+#center {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+#wheel-background {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: rgba(185, 203, 223, 0.2);
+  z-index: -3;
+  margin: 0px;
+}
+
+#wheel {
+  flex-grow: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+#zoom {
+  position: absolute;
+  top: min(5vh, 5vw, 32px);
+  right: min(5vh, 5vw, 32px);
+  background-image: url(/images/zoomIn.png);
+  z-index: 1;
+}
+
+#wheel-blur {
+  content: '';
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  border-radius: 10px;
+  background-color: rgba(185, 203, 223, 0.5);
+  z-index: 0;
+  display: none;
+  margin: 0px;
+}
+
+#moving-wheel {
+  position: absolute;
+  z-index: -2;
+}
+
+#period-wheel-icon, #sperm-wheel-icon, #baby-wheel-icon {
+  position: absolute;
+  z-index: 0;
+  background-repeat: no-repeat;
+}
+
+#period-wheel-icon {
+  background-image : url(/images/drop.png);
+}
+#sperm-wheel-icon {
+  background-image : url(/images/sperm.png);
+}
+#baby-wheel-icon {
+  background-image : url(/images/baby.png);
+}
+
+#fixed-wheel {
+  position: absolute;
+  z-index: 0;
+}
+
+#wheelValue {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#wheelValueField {
+  font-size: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#fastLeft {
+  background-image: url(/images/fastLeft.png);
+}
+
+#left {
+  background-image: url(/images/left.png);
+}
+
+#right {
+  background-image: url(/images/right.png);
+}
+
+#fastRight {
+  background-image: url(/images/fastRight.png);
+}
+
+/*#endregion*/
+
+/*#region current Date div */
+
+#currentDate {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 5px;
+}
+
+#currentDateIcon {
+  background-image: url(/images/calendar.png);
+}
+
+#currentDateField {
+  display: flex;
+  flex-direction: row;
+}
+
+#currentDateSearch {
+  background-image: url(/images/write.png);
+}
+
+/*#endregion*/
+
+/*#region bottom div */
+
+#bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 2px;
+}
+
+.eventTitle {
+  font-size: 85%;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.daysLeft {
+  font-size: 60%;
+  padding: 4px;
+}
+
+#event0 {
+  display: none;
+  justify-content: center;
+}
+
+#event1 {
+  color: rgba(255, 0, 136, 1);
+}
+
+#event2 {
+  color: rgba(255, 238, 0, 1);
+}
+
+#event3 {
+  color: rgba(0, 157, 255, 1);
+}
+
+#event4 {
+  color: rgba(0, 208, 255, 1);
+}
+
+#event-birth, #event-conception, #event-period {
+  color: white;
+}
+
+/*#endregion*/
+
+/*#region popups */
+
+#easter-egg {
+  display: none;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 70%;
+  position: relative;
+  padding-left: min(20vh, 20vw, 160px);
+  padding-right: min(20vh, 20vw, 160px);
+  margin: 0px;
+}
+
+#closeEasterEgg {
+  background-image: url(/images/cross.png);
+}
+
+#claire {
+  background-image: url(/images/claire.JPG);
+  width: min(20vh, 20vw);
+  height: min(20vh, 20vw);
+  background-size: min(20vh, 20vw);
+  border-radius: 50%;
+}
+
+#siloé {
+  background-image: url(/images/siloe.jpg);
+  width: min(20vh, 20vw);
+  height: min(20vh, 20vw);
+  background-size: min(20vh, 20vw);
+  border-radius: 50%;
+}
+
+#petitesoeur {
+  background-image: url(/images/pregnant2.png);
+  width: min(20vh, 20vw);
+  height: min(20vh, 20vw);
+  background-size: min(20vh, 20vw);
+  border-radius: 50%;
+}
+
+#credits {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: none;
+  font-size: 60%;
+  margin: 0px;
+}
+
+#credits-list {
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: absolute;
+  margin: 0px;
+}
+
+.credit {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.credit-image {
+  width: min(10vh, 10vw, 80px);
+  height: min(10vh, 10vw, 80px);
+  background-size: min(6vh, 6vw, 48px);
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0px;
+}
+
+#closeCredits {
+  background-image: url(/images/cross.png);
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 1;
+}
+
+#events-div {
+  display: none;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  font-size: 80%;
+  margin: 0px;
+}
+
+#events-list {
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: absolute;
+  margin: 0px;
+}
+
+#closeEventsDiv {
+  background-image: url(/images/cross.png);
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 1;
+}
+
+#sortEvents {
+  background-image: url(/images/sort.png);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+
+/*#endregion*/

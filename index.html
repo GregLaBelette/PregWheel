@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="height= device-height, width=device-width, initial-scale=1.0">
+  <title>PregWheel - Calendrier de grossesse
+  </title>
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link href="jquery-ui.css" rel="stylesheet">
+  <script src="script.js" defer></script>
+
+</head>
+
+<body>
+  <header>
+    <p> Une roue de la grossesse par Grégoire Vallette </p>
+  </header>
+
+  <div id="main"> <!--main-->
+
+    <div id="easter-egg" class="dark">
+  
+      <div>Cette application est dédiée à Claire, à Siloé, et à la petite soeur de Siloé...</div>
+
+      <div id="claire" class="button"></div>
+      <div id="siloé" class="button"></div>
+      <div id="petitesoeur" class="button"></div>
+
+      <div class="button" id="closeEasterEgg">
+  
+      </div>
+
+    </div>
+
+    <div id="top" class="dark"> <!--start date container-->
+
+      <div id="periodDateIcon" class="button">
+      </div>
+
+      <div id="conceptionDateIcon" class="button">
+      </div>
+
+      <div id="periodDateField">
+        <p class="day"> 21 </p>
+        <p class="month"> Juillet </p>
+        <p class="year"> 2020 </p>
+      </div>
+
+      <div id="conceptionDateField">
+        <p class="day"> 4 </p>
+        <p class="month"> Août </p>
+        <p class="year"> 2020 </p>
+      </div>
+
+      <div id="conceptionDateSearch" class="button">
+      </div>
+
+    </div> <!--start date container-->
+
+    <div id="center"> <!--center container-->
+ 
+      <div class="button" id="zoom">
+
+      </div>
+
+      <div id="wheel" >
+
+        <div id="wheel-background">
+
+        </div>
+
+        <div id="wheel-blur">
+
+        </div>
+
+        <canvas id="moving-wheel">
+
+        </canvas>
+
+        <canvas id = period-wheel-icon></canvas>
+        <canvas id = sperm-wheel-icon></canvas>
+        <canvas id = baby-wheel-icon></canvas>
+
+        <canvas id="fixed-wheel">
+
+        </canvas>
+
+      </div>
+
+      <div id="wheelValue" class='light'>
+
+        <div id="fastLeft" class="button"></div>
+        <div id="left" class="button"></div>
+        <div id="wheelValueField">
+          <p>7ème mois</p>
+          <p>29 sem. et 3 jours</p>
+        </div>
+        <div id="right" class="button"></div>
+        <div id="fastRight" class="button"></div>
+
+      </div>
+
+    </div> <!--center container-->
+
+    <div id="currentDate" class="dark">
+
+      <div id="currentDateIcon" class="button">
+      </div>
+
+      <div id="currentDateField">
+        <p class="day"> 9 </p>
+        <p class="month"> Février </p>
+        <p class="year"> 2020 </p>
+      </div>
+
+      <div id="currentDateSearch" class="button">
+      </div>
+    </div>
+
+    <div id="bottom" class="light"> <!--events container-->
+      
+      <div id="event0">
+        <p class="eventTitle">Pas d'évènement à afficher...</p>
+      </div>
+
+      <div id="event-period">
+        <p class="eventTitle">Date des dernières règles</p>
+      </div>
+
+      <div id="event-conception">
+        <p class="eventTitle">Conception</p>
+      </div>
+
+      <div id="event-birth">
+        <p class="eventTitle">Terme théorique</p>
+      </div>
+
+      <div id="event1">
+        <p class="eventTitle">Event 1</p>
+        <p class="daysLeft">( - jours)</p>
+      </div>
+      
+      <div id="event2">
+        <p class="eventTitle">Event 2</p>
+        <p class="daysLeft">( - jours)</p>
+      </div>
+      
+      <div id="event3">
+        <p class="eventTitle">Event 3</p>
+        <p class="daysLeft">( - jours)</p>
+      </div>
+
+      <div id="event4">
+        <p class="eventTitle">Event 4</p>
+        <p class="daysLeft">( - jours)</p>
+      </div>
+
+    </div> <!--events container-->
+
+    <div id="events-div" class="light">
+
+      <div class="button" id="closeEventsDiv">
+
+      </div>
+
+      <div class="button" id="sortEvents">
+
+      </div>
+
+      <div id='events-list'>
+
+      </div>
+
+    </div>
+
+    <div id="credits" class="dark">
+
+      <div id="credits-list">
+        <div class="credit"><div><img src="/images/baby.png" class="credit-image"></div><div><p>  by Brad Avison</p></div></div>
+        <div class="credit"><div><img src="/images/calendar.png" class="credit-image"></div><div><p>  by Alice Design</p></div></div>
+        <div class="credit"><div><img src="/images/cross.png" class="credit-image"></div><div><p>  by Aybige</p></div></div>
+        <div class="credit"><div><img src="/images/drop.png" class="credit-image"></div><div><p>  by TTHNga</p></div></div>
+        <div class="credit"><div><img src="/images/fastleft.png" class="credit-image"></div><div><p>  by Mike Rowe</p></div></div>
+        <div class="credit"><div><img src="/images/fastright.png" class="credit-image"></div><div><p>  by Mike Rowe</p></div></div>
+        <div class="credit"><div><img src="/images/fecundation.png" class="credit-image"></div><div><p>  by Sharon Herrera</p></div></div>
+        <div class="credit"><div><img src="/images/left.png" class="credit-image"></div><div><p>  by Mike Rowe</p></div></div>
+        <div class="credit"><div><img src="/images/pregnant2.png" class="credit-image"></div><div><p>  by Hare Krishna</p></div></div>
+        <div class="credit"><div><img src="/images/right.png" class="credit-image"></div><div><p>  by Mike Rowe</p></div></div>
+        <div class="credit"><div><img src="/images/roundArrowLeft.png" class="credit-image"></div><div><p>  by 4B Icons</p></div></div>
+        <div class="credit"><div><img src="/images/roundArrowRight.png" class="credit-image"></div><div><p>  by 4B Icons</p></div></div>
+        <div class="credit"><div><img src="/images/sort.png" class="credit-image"></div><div><p>  by Adrien Coquet</p></div></div>
+        <div class="credit"><div><img src="/images/sperm.png" class="credit-image"></div><div><p>  by Vectplus</p></div></div>
+        <div class="credit"><div><img src="/images/write.png" class="credit-image"></div><div><p>  by Adrien Coquet</p></div></div>
+        <div class="credit"><div><img src="/images/zoomIn.png" class="credit-image"></div><div><p>  by Lnhi</p></div></div>
+        <div class="credit"><div><img src="/images/zoomOut.png" class="credit-image"></div><div><p>  by Lnhi</p></div></div>
+      </div>
+
+      <div class="button" id="closeCredits">
+      </div>
+
+    </div>
+
+  </div>  <!--main-->
+
+  <footer>
+    <p>Toutes les icônes © The Noun Project (crédits)</p>
+  </footer>
+
+  <script src="external/jquery/jquery.js"></script>
+  <script src="jquery-ui.js"></script>
+  <script src="datepicker-fr.js"></script>
+
+</body>
+</html>

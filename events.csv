@@ -1,0 +1,18 @@
+﻿description;start;end;rank;short
+Première consultation;28;69;1;C1
+Deuxième consultation;70;104;1;C2
+Troisième consultation;105;133;1;C3
+Quatrième consultation;134;165;1;C4
+Cinquième consultation;166;194;1;C5
+Sixième consultation;195;225;1;C6
+Septième consultation;226;256;1;C7
+Huitième consultation;257;285;1;C8
+Écho 1er trimestre;77;98;2;eT1
+Écho 2° trimestre;140;175;2;eT2
+Écho 3° trimestre;210;245;2;eT3
+Dépistage T21 (1er tr.);77;98;3;T21
+Dépistage T21 (2ème tr.);98;126;3;T21
+Dépistage diabète gestationnel;168;196;3;DG
+Prélèvement streptoB;245;266;3;StB
+Période de déclaration;0;105;4;Dé
+Entretien prénatal précoce;106;121;4;Epp
