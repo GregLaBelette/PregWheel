@@ -237,7 +237,7 @@ p {
 }
 
 #fastLeft {
-  background-image: url(images/fastLeft.png);
+  background-image: url(images/fastleft.png);
 }
 
 #left {
@@ -249,7 +249,7 @@ p {
 }
 
 #fastRight {
-  background-image: url(images/fastRight.png);
+  background-image: url(images/fastright.png);
 }
 
 /*#endregion*/
