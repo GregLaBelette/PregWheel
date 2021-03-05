@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="style.css">
   <link href="jquery-ui.css" rel="stylesheet">
   <script src="script.js" defer></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
 </head>
 
@@ -18,10 +20,11 @@
     <p> Une roue de la grossesse par Grégoire Vallette </p>
   </header>
 
-  <div id="main"> <!--main-->
+  <div id="main">
+    <!--main-->
 
     <div id="easter-egg" class="dark">
-  
+
       <div>Cette application est dédiée à Claire, à Siloé, et à la petite soeur de Siloé...</div>
 
       <div id="claire" class="button"></div>
@@ -29,12 +32,13 @@
       <div id="petitesoeur" class="button"></div>
 
       <div class="button" id="closeEasterEgg">
-  
+
       </div>
 
     </div>
 
-    <div id="top" class="dark"> <!--start date container-->
+    <div id="top" class="dark">
+      <!--start date container-->
 
       <div id="periodDateIcon" class="button">
       </div>
@@ -57,15 +61,17 @@
       <div id="conceptionDateSearch" class="button">
       </div>
 
-    </div> <!--start date container-->
+    </div>
+    <!--start date container-->
 
-    <div id="center"> <!--center container-->
- 
+    <div id="center">
+      <!--center container-->
+
       <div class="button" id="zoom">
 
       </div>
 
-      <div id="wheel" >
+      <div id="wheel">
 
         <div id="wheel-background">
 
@@ -79,9 +85,9 @@
 
         </canvas>
 
-        <canvas id = period-wheel-icon></canvas>
-        <canvas id = sperm-wheel-icon></canvas>
-        <canvas id = baby-wheel-icon></canvas>
+        <canvas id=period-wheel-icon></canvas>
+        <canvas id=sperm-wheel-icon></canvas>
+        <canvas id=baby-wheel-icon></canvas>
 
         <canvas id="fixed-wheel">
 
@@ -102,7 +108,8 @@
 
       </div>
 
-    </div> <!--center container-->
+    </div>
+    <!--center container-->
 
     <div id="currentDate" class="dark">
 
@@ -119,8 +126,9 @@
       </div>
     </div>
 
-    <div id="bottom" class="light"> <!--events container-->
-      
+    <div id="bottom" class="light">
+      <!--events container-->
+
       <div id="event0">
         <p class="eventTitle">Pas d'évènement à afficher...</p>
       </div>
@@ -141,12 +149,12 @@
         <p class="eventTitle">Event 1</p>
         <p class="daysLeft">( - jours)</p>
       </div>
-      
+
       <div id="event2">
         <p class="eventTitle">Event 2</p>
         <p class="daysLeft">( - jours)</p>
       </div>
-      
+
       <div id="event3">
         <p class="eventTitle">Event 3</p>
         <p class="daysLeft">( - jours)</p>
@@ -157,7 +165,8 @@
         <p class="daysLeft">( - jours)</p>
       </div>
 
-    </div> <!--events container-->
+    </div>
+    <!--events container-->
 
     <div id="events-div" class="light">
 
@@ -178,22 +187,102 @@
     <div id="credits" class="dark">
 
       <div id="credits-list">
-        <div class="credit"><div><img src="images/baby.png" class="credit-image"></div><div><p>  by Brad Avison</p></div></div>
-        <div class="credit"><div><img src="images/calendar.png" class="credit-image"></div><div><p>  by Alice Design</p></div></div>
-        <div class="credit"><div><img src="images/cross.png" class="credit-image"></div><div><p>  by Aybige</p></div></div>
-        <div class="credit"><div><img src="images/drop.png" class="credit-image"></div><div><p>  by TTHNga</p></div></div>
-        <div class="credit"><div><img src="images/fastleft.png" class="credit-image"></div><div><p>  by Mike Rowe</p></div></div>
-        <div class="credit"><div><img src="images/fastright.png" class="credit-image"></div><div><p>  by Mike Rowe</p></div></div>
-        <div class="credit"><div><img src="images/left.png" class="credit-image"></div><div><p>  by Mike Rowe</p></div></div>
-        <div class="credit"><div><img src="images/pregnant2.png" class="credit-image"></div><div><p>  by Hare Krishna</p></div></div>
-        <div class="credit"><div><img src="images/right.png" class="credit-image"></div><div><p>  by Mike Rowe</p></div></div>
-        <div class="credit"><div><img src="images/roundArrowLeft.png" class="credit-image"></div><div><p>  by 4B Icons</p></div></div>
-        <div class="credit"><div><img src="images/roundArrowRight.png" class="credit-image"></div><div><p>  by 4B Icons</p></div></div>
-        <div class="credit"><div><img src="images/sort.png" class="credit-image"></div><div><p>  by Adrien Coquet</p></div></div>
-        <div class="credit"><div><img src="images/sperm.png" class="credit-image"></div><div><p>  by Vectplus</p></div></div>
-        <div class="credit"><div><img src="images/write.png" class="credit-image"></div><div><p>  by Adrien Coquet</p></div></div>
-        <div class="credit"><div><img src="images/zoomIn.png" class="credit-image"></div><div><p>  by Lnhi</p></div></div>
-        <div class="credit"><div><img src="images/zoomOut.png" class="credit-image"></div><div><p>  by Lnhi</p></div></div>
+        <div class="credit">
+          <div><img src="images/baby.png" class="credit-image"></div>
+          <div>
+            <p> by Brad Avison</p>
+          </div>
+        </div>
+        <div class="credit">
+          <div><img src="images/calendar.png" class="credit-image"></div>
+          <div>
+            <p> by Alice Design</p>
+          </div>
+        </div>
+        <div class="credit">
+          <div><img src="images/cross.png" class="credit-image"></div>
+          <div>
+            <p> by Aybige</p>
+          </div>
+        </div>
+        <div class="credit">
+          <div><img src="images/drop.png" class="credit-image"></div>
+          <div>
+            <p> by TTHNga</p>
+          </div>
+        </div>
+        <div class="credit">
+          <div><img src="images/fastleft.png" class="credit-image"></div>
+          <div>
+            <p> by Mike Rowe</p>
+          </div>
+        </div>
+        <div class="credit">
+          <div><img src="images/fastright.png" class="credit-image"></div>
+          <div>
+            <p> by Mike Rowe</p>
+          </div>
+        </div>
+        <div class="credit">
+          <div><img src="images/left.png" class="credit-image"></div>
+          <div>
+            <p> by Mike Rowe</p>
+          </div>
+        </div>
+        <div class="credit">
+          <div><img src="images/pregnant2.png" class="credit-image"></div>
+          <div>
+            <p> by Hare Krishna</p>
+          </div>
+        </div>
+        <div class="credit">
+          <div><img src="images/right.png" class="credit-image"></div>
+          <div>
+            <p> by Mike Rowe</p>
+          </div>
+        </div>
+        <div class="credit">
+          <div><img src="images/roundArrowLeft.png" class="credit-image"></div>
+          <div>
+            <p> by 4B Icons</p>
+          </div>
+        </div>
+        <div class="credit">
+          <div><img src="images/roundArrowRight.png" class="credit-image"></div>
+          <div>
+            <p> by 4B Icons</p>
+          </div>
+        </div>
+        <div class="credit">
+          <div><img src="images/sort.png" class="credit-image"></div>
+          <div>
+            <p> by Adrien Coquet</p>
+          </div>
+        </div>
+        <div class="credit">
+          <div><img src="images/sperm.png" class="credit-image"></div>
+          <div>
+            <p> by Vectplus</p>
+          </div>
+        </div>
+        <div class="credit">
+          <div><img src="images/write.png" class="credit-image"></div>
+          <div>
+            <p> by Adrien Coquet</p>
+          </div>
+        </div>
+        <div class="credit">
+          <div><img src="images/zoomIn.png" class="credit-image"></div>
+          <div>
+            <p> by Lnhi</p>
+          </div>
+        </div>
+        <div class="credit">
+          <div><img src="images/zoomOut.png" class="credit-image"></div>
+          <div>
+            <p> by Lnhi</p>
+          </div>
+        </div>
       </div>
 
       <div class="button" id="closeCredits">
@@ -201,7 +290,8 @@
 
     </div>
 
-  </div>  <!--main-->
+  </div>
+  <!--main-->
 
   <footer>
     <p>Toutes les icônes © The Noun Project (crédits)</p>
@@ -212,4 +302,5 @@
   <script src="datepicker-fr.js"></script>
 
 </body>
+
 </html>

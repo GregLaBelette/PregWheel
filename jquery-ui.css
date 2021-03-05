@@ -269,28 +269,13 @@
 /* Component containers
 ----------------------------------*/
 
-@font-face {
-  font-family: "montserrat";
-  src: url(/fonts/montserrat/Montserrat-Regular.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: "montserrat-thin";
-  src: url(./fonts/montserrat/Montserrat-Thin.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: "montserrat-bold";
-  src: url(./fonts/montserrat/Montserrat-Medium.ttf) format("truetype");
-}
-
 .ui-datepicker{
   left: -100px;
   right: -100px;
 }
 
 .ui-widget {
-	font-family: montserrat;
+	font-family: 'Montserrat';
 	font-size: 1em;
 }
 

@@ -1,22 +1,3 @@
-/*#region defining fonts*/
-
-@font-face {
-  font-family: "montserrat";
-  src: url(fonts/montserrat/Montserrat-Regular.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: "montserrat-thin";
-  src: url(fonts/montserrat/Montserrat-Thin.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: "montserrat-bold";
-  src: url(fonts/montserrat/Montserrat-Medium.ttf) format("truetype");
-}
-
-/*#endregion*/
-
 /*#region header and footer*/
 
 header, footer {
@@ -51,7 +32,7 @@ html {
 body {
   margin: 0px;
   height: 100vh;
-  font-family: montserrat;
+  font-family: 'Montserrat';
   color: rgba(185, 203, 223, 1);
   display: flex;
   flex-direction: column;
