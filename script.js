@@ -1163,7 +1163,7 @@ function drawWheel() {
 
   const ctxM = movingWheel.getContext('2d');
   const ctxF = fixedWheel.getContext('2d');
-  const fontSize = wheelSize / 56;
+  const fontSize = wheelSize / 48;
   ctxM.font = `${fontSize}px montserrat`;
   ctxM.textAlign = 'center';
 
@@ -1320,7 +1320,7 @@ function drawWheel() {
       ctxM.stroke();
 
       ctxM.save();
-      ctxM.rotate(Math.PI / 2 + daysToRad(events[i].start) + daysToRad(3));
+      ctxM.rotate(Math.PI / 2 + daysToRad(events[i].start) + daysToRad(4));
       ctxM.translate(0, -(wheelSize / 2.3 - 3 * fontSize))
       ctxM.fillStyle = 'rgba(188,208,240)';
       ctxM.textBaseline = 'middle';
@@ -1335,7 +1335,7 @@ function drawWheel() {
       ctxM.stroke();
 
       ctxM.save();
-      ctxM.rotate(Math.PI / 2 + daysToRad(events[i].start) + daysToRad(3));
+      ctxM.rotate(Math.PI / 2 + daysToRad(events[i].start) + daysToRad(4));
       ctxM.translate(0, -(wheelSize / 2.3 - 5 * fontSize))
       ctxM.fillStyle = 'rgba(9,20,38)';
       ctxM.textBaseline = 'middle';
@@ -1350,7 +1350,7 @@ function drawWheel() {
       ctxM.stroke();
 
       ctxM.save();
-      ctxM.rotate(Math.PI / 2 + daysToRad(events[i].start) + daysToRad(3));
+      ctxM.rotate(Math.PI / 2 + daysToRad(events[i].start) + daysToRad(4));
       ctxM.translate(0, -(wheelSize / 2.3 - 7 * fontSize))
       ctxM.fillStyle = 'rgba(188,208,240)';
       ctxM.textBaseline = 'middle';
@@ -1365,7 +1365,7 @@ function drawWheel() {
       ctxM.stroke();
 
       ctxM.save();
-      ctxM.rotate(Math.PI / 2 + daysToRad(events[i].start) + daysToRad(3));
+      ctxM.rotate(Math.PI / 2 + daysToRad(events[i].start) + daysToRad(4));
       ctxM.translate(0, -(wheelSize / 2.3 - 9 * fontSize))
       ctxM.fillStyle = 'rgba(9,20,38)';
       ctxM.textBaseline = 'middle';
