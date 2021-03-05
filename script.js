@@ -276,7 +276,7 @@ zoom.onclick = function () {
     zoomState = true;
     bottomDiv.style.display = 'none';
     wheelValue.style.display = 'none';
-    zoom.style.backgroundImage = 'url(/images/zoomOut.png)';
+    zoom.style.backgroundImage = 'url(images/zoomOut.png)';
     outer = Math.max(wheel.clientWidth, wheel.clientHeight);
     wheelSize = 1 * outer; //2*outer
     if (wheel.clientWidth < wheel.clientHeight) {
@@ -289,7 +289,7 @@ zoom.onclick = function () {
     zoomState = false;
     bottomDiv.style.display = 'flex';
     wheelValue.style.display = 'flex';
-    zoom.style.backgroundImage = 'url(/images/zoomIn.png)';
+    zoom.style.backgroundImage = 'url(images/zoomIn.png)';
     outer = Math.max(wheel.clientWidth, wheel.clientHeight);
     wheelSize = 2 * outer; //2*outer
     WheelPosition = `${wheel.clientWidth / 2 - wheelSize / 1.5}px`;

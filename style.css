@@ -2,17 +2,17 @@
 
 @font-face {
   font-family: "montserrat";
-  src: url(/fonts/montserrat/Montserrat-Regular.ttf) format("truetype");
+  src: url(fonts/montserrat/Montserrat-Regular.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "montserrat-thin";
-  src: url(./fonts/montserrat/Montserrat-Thin.ttf) format("truetype");
+  src: url(fonts/montserrat/Montserrat-Thin.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "montserrat-bold";
-  src: url(./fonts/montserrat/Montserrat-Medium.ttf) format("truetype");
+  src: url(fonts/montserrat/Montserrat-Medium.ttf) format("truetype");
 }
 
 /*#endregion*/
@@ -122,12 +122,12 @@ p {
 }
 
 #conceptionDateIcon {
-  background-image: url(/images/sperm.png);
+  background-image: url(images/sperm.png);
   display: flex;
 }
 
 #periodDateIcon {
-  background-image: url(/images/drop.png);
+  background-image: url(images/drop.png);
   display: flex;
   border: solid 1px white;
 }
@@ -143,7 +143,7 @@ p {
 }
 
 #conceptionDateSearch {
-  background-image: url(/images/write.png);
+  background-image: url(images/write.png);
 }
 
 /*#endregion*/
@@ -178,7 +178,7 @@ p {
   position: absolute;
   top: min(5vh, 5vw, 32px);
   right: min(5vh, 5vw, 32px);
-  background-image: url(/images/zoomIn.png);
+  background-image: url(images/zoomIn.png);
   z-index: 1;
 }
 
@@ -208,13 +208,13 @@ p {
 }
 
 #period-wheel-icon {
-  background-image : url(/images/drop.png);
+  background-image : url(images/drop.png);
 }
 #sperm-wheel-icon {
-  background-image : url(/images/sperm.png);
+  background-image : url(images/sperm.png);
 }
 #baby-wheel-icon {
-  background-image : url(/images/baby.png);
+  background-image : url(images/baby.png);
 }
 
 #fixed-wheel {
@@ -237,19 +237,19 @@ p {
 }
 
 #fastLeft {
-  background-image: url(/images/fastLeft.png);
+  background-image: url(images/fastLeft.png);
 }
 
 #left {
-  background-image: url(/images/left.png);
+  background-image: url(images/left.png);
 }
 
 #right {
-  background-image: url(/images/right.png);
+  background-image: url(images/right.png);
 }
 
 #fastRight {
-  background-image: url(/images/fastRight.png);
+  background-image: url(images/fastRight.png);
 }
 
 /*#endregion*/
@@ -265,7 +265,7 @@ p {
 }
 
 #currentDateIcon {
-  background-image: url(/images/calendar.png);
+  background-image: url(images/calendar.png);
 }
 
 #currentDateField {
@@ -274,7 +274,7 @@ p {
 }
 
 #currentDateSearch {
-  background-image: url(/images/write.png);
+  background-image: url(images/write.png);
 }
 
 /*#endregion*/
@@ -342,11 +342,11 @@ p {
 }
 
 #closeEasterEgg {
-  background-image: url(/images/cross.png);
+  background-image: url(images/cross.png);
 }
 
 #claire {
-  background-image: url(/images/claire.JPG);
+  background-image: url(images/claire.JPG);
   width: min(20vh, 20vw);
   height: min(20vh, 20vw);
   background-size: min(20vh, 20vw);
@@ -354,7 +354,7 @@ p {
 }
 
 #siloé {
-  background-image: url(/images/siloe.jpg);
+  background-image: url(images/siloe.jpg);
   width: min(20vh, 20vw);
   height: min(20vh, 20vw);
   background-size: min(20vh, 20vw);
@@ -362,7 +362,7 @@ p {
 }
 
 #petitesoeur {
-  background-image: url(/images/pregnant2.png);
+  background-image: url(images/pregnant2.png);
   width: min(20vh, 20vw);
   height: min(20vh, 20vw);
   background-size: min(20vh, 20vw);
@@ -407,7 +407,7 @@ p {
 }
 
 #closeCredits {
-  background-image: url(/images/cross.png);
+  background-image: url(images/cross.png);
   position: absolute;
   top: 0px;
   right: 0px;
@@ -436,7 +436,7 @@ p {
 }
 
 #closeEventsDiv {
-  background-image: url(/images/cross.png);
+  background-image: url(images/cross.png);
   position: absolute;
   top: 0px;
   right: 0px;
@@ -444,7 +444,7 @@ p {
 }
 
 #sortEvents {
-  background-image: url(/images/sort.png);
+  background-image: url(images/sort.png);
   position: absolute;
   top: 0px;
   left: 0px;
