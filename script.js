@@ -193,6 +193,44 @@ window.onresize = function () {
   drawWheel();
 }
 
+//resize - Mobile
+window.onorientationchange = function () {
+  if (document.querySelector('#ui-datepicker-div')) {
+    document.querySelector('#ui-datepicker-div').style.display = 'none';
+  }
+  resizeBackground();
+  checkFlex();
+  outer = Math.max(wheel.clientWidth, wheel.clientHeight);
+  if (center.style.display === 'none') {
+  }
+  else if (zoomState === false) {
+    easterEgg.style.display = 'none';
+    credits.style.display = 'none';
+    eventsDiv.style.display = 'none';
+    center.style.display = 'flex';
+    topDiv.style.display = 'flex';
+    currentDateDiv.style.display = 'flex';
+    bottomDiv.style.display = 'flex';
+    wheelSize = 2 * outer; //2*outer
+    WheelPosition = `${wheel.clientWidth / 2 - wheelSize / 1.5}px`; //-size/1.5
+  } else {
+    easterEgg.style.display = 'none';
+    credits.style.display = 'none';
+    eventsDiv.style.display = 'none';
+    center.style.display = 'flex';
+    currentDateDiv.style.display = 'none';
+    topDiv.style.display = 'flex';
+    currentDateDiv.style.display = 'flex';
+    wheelSize = 1 * outer; //2*outer
+    if (wheel.clientWidth < wheel.clientHeight) {
+      WheelPosition = `${wheel.clientWidth - wheelSize}px`; //-size/1.5
+    } else {
+      WheelPosition = `${wheel.clientWidth / 2 - wheelSize / 2}px`; //-size/1.5
+    }
+  }
+  drawWheel();
+}
+
 //Adjust background to fill entire window
 function resizeBackground() {
   if (window.innerHeight / window.innerWidth > 1371 / 1028) {
@@ -318,10 +356,10 @@ closeEventsDiv.onclick = function () {
 sortEvents.onclick = function () {
   if (eventsSort === 'type') {
     eventsSort = 'date';
-    localStorage.setItem('sort','date');
+    localStorage.setItem('sort', 'date');
   } else {
     eventsSort = 'type';
-    localStorage.setItem('sort','type');
+    localStorage.setItem('sort', 'type');
   }
   sortEventsList();
   populateEventsList();
@@ -728,7 +766,7 @@ function sortEventsList() {
     events.sort(function (a, b) {
       return a.start - b.start;
     })
-    
+
     events.sort(function (a, b) {
       return a.rank - b.rank;
     })
@@ -1017,13 +1055,13 @@ function displayEvents() {
         document.querySelector('#event1 .eventTitle').innerHTML = days[term].event1;
 
 
-        if (days[term].r1>6) {
-          if (days[term].r1%7 === 1) {
-            document.querySelector('#event1 .daysLeft').innerHTML = `${Math.floor(days[term].r1/7)} sem. et ${days[term].r1%7} jour`;
-          } else if (days[term].r1%7 === 0) {
-            document.querySelector('#event1 .daysLeft').innerHTML = `${Math.floor(days[term].r1/7)} sem.`;
-          }else {
-            document.querySelector('#event1 .daysLeft').innerHTML = `${Math.floor(days[term].r1/7)} sem. et ${days[term].r1%7} jours`;
+        if (days[term].r1 > 6) {
+          if (days[term].r1 % 7 === 1) {
+            document.querySelector('#event1 .daysLeft').innerHTML = `${Math.floor(days[term].r1 / 7)} sem. et ${days[term].r1 % 7} jour`;
+          } else if (days[term].r1 % 7 === 0) {
+            document.querySelector('#event1 .daysLeft').innerHTML = `${Math.floor(days[term].r1 / 7)} sem.`;
+          } else {
+            document.querySelector('#event1 .daysLeft').innerHTML = `${Math.floor(days[term].r1 / 7)} sem. et ${days[term].r1 % 7} jours`;
           }
         } else {
           if (days[term].r1 === 1) {
@@ -1041,13 +1079,13 @@ function displayEvents() {
         document.querySelector('#event2').style.display = "";
         document.querySelector('#event0').style.display = "none";
         document.querySelector('#event2 .eventTitle').innerHTML = days[term].event2;
-        if (days[term].r2>6) {
-          if (days[term].r2%7 === 1) {
-            document.querySelector('#event2 .daysLeft').innerHTML = `${Math.floor(days[term].r2/7)} sem. et ${days[term].r2%7} jour`;
-          } else if (days[term].r2%7 === 0) {
-            document.querySelector('#event2 .daysLeft').innerHTML = `${Math.floor(days[term].r2/7)} sem.`;
-          }else {
-            document.querySelector('#event2 .daysLeft').innerHTML = `${Math.floor(days[term].r2/7)} sem. et ${days[term].r2%7} jours`;
+        if (days[term].r2 > 6) {
+          if (days[term].r2 % 7 === 1) {
+            document.querySelector('#event2 .daysLeft').innerHTML = `${Math.floor(days[term].r2 / 7)} sem. et ${days[term].r2 % 7} jour`;
+          } else if (days[term].r2 % 7 === 0) {
+            document.querySelector('#event2 .daysLeft').innerHTML = `${Math.floor(days[term].r2 / 7)} sem.`;
+          } else {
+            document.querySelector('#event2 .daysLeft').innerHTML = `${Math.floor(days[term].r2 / 7)} sem. et ${days[term].r2 % 7} jours`;
           }
         } else {
           if (days[term].r2 === 1) {
@@ -1063,13 +1101,13 @@ function displayEvents() {
         document.querySelector('#event3').style.display = "";
         document.querySelector('#event0').style.display = "none";
         document.querySelector('#event3 .eventTitle').innerHTML = days[term].event3;
-        if (days[term].r3>6) {
-          if (days[term].r3%7 === 1) {
-            document.querySelector('#event3 .daysLeft').innerHTML = `${Math.floor(days[term].r3/7)} sem. et ${days[term].r3%7} jour`;
-          } else if (days[term].r3%7 === 0) {
-            document.querySelector('#event3 .daysLeft').innerHTML = `${Math.floor(days[term].r3/7)} sem.`;
-          }else {
-            document.querySelector('#event3 .daysLeft').innerHTML = `${Math.floor(days[term].r3/7)} sem. et ${days[term].r3%7} jours`;
+        if (days[term].r3 > 6) {
+          if (days[term].r3 % 7 === 1) {
+            document.querySelector('#event3 .daysLeft').innerHTML = `${Math.floor(days[term].r3 / 7)} sem. et ${days[term].r3 % 7} jour`;
+          } else if (days[term].r3 % 7 === 0) {
+            document.querySelector('#event3 .daysLeft').innerHTML = `${Math.floor(days[term].r3 / 7)} sem.`;
+          } else {
+            document.querySelector('#event3 .daysLeft').innerHTML = `${Math.floor(days[term].r3 / 7)} sem. et ${days[term].r3 % 7} jours`;
           }
         } else {
           if (days[term].r3 === 1) {
@@ -1085,13 +1123,13 @@ function displayEvents() {
         document.querySelector('#event4').style.display = "";
         document.querySelector('#event0').style.display = "none";
         document.querySelector('#event4 .eventTitle').innerHTML = days[term].event4;
-        if (days[term].r4>6) {
-          if (days[term].r4%7 === 1) {
-            document.querySelector('#event4 .daysLeft').innerHTML = `${Math.floor(days[term].r4/7)} sem. et ${days[term].r4%7} jour`;
-          } else if (days[term].r4%7 === 0) {
-            document.querySelector('#event4 .daysLeft').innerHTML = `${Math.floor(days[term].r4/7)} sem.`;
-          }else {
-            document.querySelector('#event4 .daysLeft').innerHTML = `${Math.floor(days[term].r4/7)} sem. et ${days[term].r4%7} jours`;
+        if (days[term].r4 > 6) {
+          if (days[term].r4 % 7 === 1) {
+            document.querySelector('#event4 .daysLeft').innerHTML = `${Math.floor(days[term].r4 / 7)} sem. et ${days[term].r4 % 7} jour`;
+          } else if (days[term].r4 % 7 === 0) {
+            document.querySelector('#event4 .daysLeft').innerHTML = `${Math.floor(days[term].r4 / 7)} sem.`;
+          } else {
+            document.querySelector('#event4 .daysLeft').innerHTML = `${Math.floor(days[term].r4 / 7)} sem. et ${days[term].r4 % 7} jours`;
           }
         } else {
           if (days[term].r4 === 1) {
@@ -1206,13 +1244,13 @@ function drawWheel() {
   spermWheelIcon.style.left = WheelPosition;
   spermWheelIcon.style.backgroundSize = `${imgSize}px`;
   spermWheelIcon.style.backgroundPosition = `top ${6 * fontSize}px center`;
-  spermWheelIcon.style.transform = `rotate(${14/294}turn)`;
+  spermWheelIcon.style.transform = `rotate(${14 / 294}turn)`;
 
   babyWheelIcon.width = babyWheelIcon.height = wheelSize;
   babyWheelIcon.style.left = WheelPosition;
   babyWheelIcon.style.backgroundSize = `${imgSize}px`;
   babyWheelIcon.style.backgroundPosition = `top ${6 * fontSize}px center`;
-  babyWheelIcon.style.transform = `rotate(${-7/294}turn)`;
+  babyWheelIcon.style.transform = `rotate(${-7 / 294}turn)`;
 
   for (let i = 0; i < 42; i++) {
 
@@ -1346,8 +1384,8 @@ function rotateWheel(days) {
   movingWheel.style.transform = `rotate(${rot}turn)`;
   wheelRotation = days;
   periodWheelIcon.style.transform = `rotate(${rot}turn)`;
-  spermWheelIcon.style.transform = `rotate(${rot+14/294}turn)`;
-  babyWheelIcon.style.transform = `rotate(${rot-7/294}turn)`;
+  spermWheelIcon.style.transform = `rotate(${rot + 14 / 294}turn)`;
+  babyWheelIcon.style.transform = `rotate(${rot - 7 / 294}turn)`;
 }
 
 //Updates visualization for all stuff ahead.
