@@ -1238,18 +1238,18 @@ function drawWheel() {
   periodWheelIcon.width = periodWheelIcon.height = wheelSize;
   periodWheelIcon.style.left = WheelPosition;
   periodWheelIcon.style.backgroundSize = `${imgSize}px`;
-  periodWheelIcon.style.backgroundPosition = `top ${6 * fontSize}px center`;
+  periodWheelIcon.style.backgroundPosition = `top ${5.4 * fontSize}px center`;
 
   spermWheelIcon.width = spermWheelIcon.height = wheelSize;
   spermWheelIcon.style.left = WheelPosition;
   spermWheelIcon.style.backgroundSize = `${imgSize}px`;
-  spermWheelIcon.style.backgroundPosition = `top ${6 * fontSize}px center`;
+  spermWheelIcon.style.backgroundPosition = `top ${5.4 * fontSize}px center`;
   spermWheelIcon.style.transform = `rotate(${14 / 294}turn)`;
 
   babyWheelIcon.width = babyWheelIcon.height = wheelSize;
   babyWheelIcon.style.left = WheelPosition;
   babyWheelIcon.style.backgroundSize = `${imgSize}px`;
-  babyWheelIcon.style.backgroundPosition = `top ${6 * fontSize}px center`;
+  babyWheelIcon.style.backgroundPosition = `top ${5.4 * fontSize}px center`;
   babyWheelIcon.style.transform = `rotate(${-7 / 294}turn)`;
 
   for (let i = 0; i < 42; i++) {
