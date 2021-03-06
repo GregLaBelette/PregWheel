@@ -1156,8 +1156,8 @@ function daysToRad(days) {
 function drawWheel() {
 
   //Variables de la roue
-  movingWheel.width = movingWheel.height = wheelSize;
-  fixedWheel.width = fixedWheel.height = wheelSize;
+  movingWheel.width = movingWheel.height = devicePixelRatio*wheelSize;
+  fixedWheel.width = fixedWheel.height = devicePixelRatio*wheelSize;
   movingWheel.style.left = WheelPosition;
   fixedWheel.style.left = WheelPosition;
 
@@ -1166,6 +1166,9 @@ function drawWheel() {
   const fontSize = wheelSize / 48;
   ctxM.font = `${fontSize}px montserrat`;
   ctxM.textAlign = 'center';
+
+  ctxM.scale (devicePixelRatio,devicePixelRatio);
+  ctxF.scale (devicePixelRatio,devicePixelRatio);
 
   ctxM.translate(wheelSize / 2, wheelSize / 2);
   ctxM.rotate(-Math.PI / 2);
@@ -1177,9 +1180,9 @@ function drawWheel() {
   ctxF.rotate(Math.PI / 2);
   ctxF.fillStyle = 'white';
   ctxF.beginPath();
-  ctxF.moveTo(0.7 * fontSize, -wheelSize / 2.01);
+  ctxF.moveTo(0.5 * fontSize, -wheelSize / 2.01);
   ctxF.lineTo(0, -wheelSize / 2.09);
-  ctxF.lineTo(-0.7 * fontSize, -wheelSize / 2.01);
+  ctxF.lineTo(-0.5 * fontSize, -wheelSize / 2.01);
   ctxF.fill();
   ctxF.restore();
 
@@ -1374,6 +1377,8 @@ function drawWheel() {
 
     }
   }
+  movingWheel.style.width = movingWheel.style.height = `${wheelSize}px`;
+  fixedWheel.style.width = movingWheel.style.height = `${wheelSize}px`;
   eventsWrap();
   rotateWheel(term);
 }
