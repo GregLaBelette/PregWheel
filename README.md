@@ -2,7 +2,7 @@
 
 <h1>Welcome to PregWheel!</h1>
 
-Github Pages here -> <a href ="https://greglabelette.github.io/PregWheel/">PregWheel</a>
+Github Pages here -> <a href ="https://greglabelette.github.io/PregWheel/" target="_blank">PregWheel</a>
 
 <h2>PregWheel is...</h2>
 
